@@ -8,9 +8,10 @@ type Props = {
 };
 
 const PREFS = [
-  { key: "essencial", label: "Essencial" },
-  { key: "muito", label: "Quero muito" },
-  { key: "ok", label: "Opcional" },
+  { key: "1", label: "Seria Muito Legal" },
+  { key: "2", label: "Quero Muito 🔥" },
+  { key: "3", label: "Vou Ficar Feliz" },
+  { key: "4", label: "Não tem erro" },
 ];
 
 export default function Filters({ sort, setSort, prefs, setPrefs }: Props) {

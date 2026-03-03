@@ -17,13 +17,13 @@ export default function Hero() {
         className="relative z-10 max-w-4xl px-6"
       >
         <h1 className="text-5xl md:text-6xl font-semibold tracking-tight leading-tight">
-          Ideias que transformam
+          Ideias para me dar  
           <br />
-          momentos em memória.
+          de presente, se você não faz ideia do que dar.
         </h1>
 
         <p className="mt-6 text-gray-600 text-lg">
-          Curadoria pessoal com significado.
+          08 . 04 . 2004
         </p>
       </motion.div>
     </section>

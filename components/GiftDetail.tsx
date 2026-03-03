@@ -24,6 +24,11 @@ export default function GiftDetail({ gift }: any) {
           <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-md">
             {gift.description}
           </p>
+          {gift.observation && (
+            <p className="mt-3 text-sm text-black/50 max-w-md italic">
+              💬 {gift.observation}
+            </p>
+          )}
           <a href={gift.buyUrl} target="_blank" className="inline-block mt-8 px-10 py-4 bg-black text-white rounded-full hover:opacity-85 transition w-fit">
             Comprar
           </a>

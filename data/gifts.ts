@@ -5,6 +5,7 @@ export type Gift = {
   slug: string;
   image: string;
   description: string;
+  observation?: string;
   buyUrl: string;
   price: number;
   preference: Preference;
@@ -16,6 +17,7 @@ export const gifts: Gift[] = [
     slug: "camiseta-john-mayer",
     image: "/images/camisetajm.png",
     description: "Camiseta álbum continuum J.M.",
+    observation: "Tamanho G",  // ← aqui
     buyUrl: "https://www.mooncamisetas.com/product-page/camiseta-john-mayer-continuum",
     price: 79.9,
     preference: "2",
@@ -42,6 +44,7 @@ export const gifts: Gift[] = [
     name: "Cubo Magico 3x3",
     slug: "cubo-magico-3x3",
     image: "/images/cubo.png",
+    observation: "Cupom: EUVOLTEI",
     description: "Cubo magnetico profissional",
     buyUrl: "https://www.oncube.com.br/cubo-magico-3x3x3-moyu-weilong-wrm-v10-magnetico",
     price: 94.9,
@@ -52,6 +55,7 @@ export const gifts: Gift[] = [
     slug: "camiseta-toji",
     image: "/images/camisetatoji.png",
     description: "Camiseta do Fucking TOJI",
+    observation: "Tamanho G",
     buyUrl: "https://purplecomics.com.br/produtos/oversized-toji-curse-scrto/",
     price: 99.9,
     preference: "1",
@@ -105,6 +109,7 @@ export const gifts: Gift[] = [
     name: "Slide Adidas",
     slug: "slide-adidas",
     image: "/images/slide.png",
+    observation: "Tamanho 42/43",
     description: "A muito tempo eu estou querendo comprar um slide novo, desde o acidente do Luke ter comido o meu",
     buyUrl: "https://www.adidas.com.br/chinelo-adilette-22/HP6522.html",
     price: 349.99,
@@ -114,6 +119,7 @@ export const gifts: Gift[] = [
     name: "Slide Adidas 2",
     slug: "slide-adidas-2",
     image: "/images/slide2.png",
+    observation: "Tamanho 42/43",
     description: "A muito tempo eu estou querendo comprar um slide novo, desde o acidente do Luke ter comido o meu, e esse e uma versão mais barata",
     buyUrl: "https://www.adidas.com.br/chinelo-adilette-lumia/JP9580.html",
     price: 199.99,

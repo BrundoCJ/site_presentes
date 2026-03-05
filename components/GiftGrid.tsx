@@ -8,6 +8,7 @@ import Filters from "./Filters";
 export default function GiftGrid() {
   const [sort, setSort] = useState<"asc" | "desc">("asc");
   const [prefs, setPrefs] = useState<string[]>([]);
+  const [showFilters, setShowFilters] = useState(false);
 
   const filtered = useMemo(() => {
     let list = prefs.length > 0
@@ -21,19 +22,31 @@ export default function GiftGrid() {
 
   return (
     <section className="w-full pb-24">
+      {/* Botão de filtros visível só no mobile */}
+      <div className="flex lg:hidden justify-end px-4 mb-3">
+        <button
+          onClick={() => setShowFilters(!showFilters)}
+          className="text-xs border border-black/20 rounded-full px-4 py-2 bg-white/80 backdrop-blur"
+        >
+          {showFilters ? "Fechar filtros" : "Filtros"}
+        </button>
+      </div>
+
+      {/* Filtros mobile (dropdown) */}
+      {showFilters && (
+        <div className="lg:hidden px-4 mb-4">
+          <Filters sort={sort} setSort={setSort} prefs={prefs} setPrefs={setPrefs} />
+        </div>
+      )}
+
       <div className="flex items-start">
-        {/* Sidebar colada na esquerda */}
-        <div className="pl-6 pr-4 pt-2 shrink-0">
-          <Filters
-            sort={sort}
-            setSort={setSort}
-            prefs={prefs}
-            setPrefs={setPrefs}
-          />
+        {/* Sidebar — só desktop */}
+        <div className="hidden lg:block pl-6 pr-4 pt-2 shrink-0">
+          <Filters sort={sort} setSort={setSort} prefs={prefs} setPrefs={setPrefs} />
         </div>
 
-        {/* Grid 3 colunas com imagens retrato */}
-        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pr-8">
+        {/* Grid */}
+        <div className="flex-1 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4 lg:pr-8 lg:pl-0">
           {filtered.map((gift) => (
             <GiftCard key={gift.slug} gift={gift} />
           ))}

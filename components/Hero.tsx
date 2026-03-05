@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import BackgroundFX from "@/components/BackgroundFX";
 import Header from "@/components/Header";
 
+
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center text-center">
@@ -29,3 +30,4 @@ export default function Hero() {
     </section>
   );
 }
+ 

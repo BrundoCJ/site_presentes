@@ -3,13 +3,12 @@ import { motion } from "framer-motion";
 
 export default function GiftDetail({ gift }: any) {
   return (
-    <div className="flex items-center justify-center min-h-screen px-16">
-      <div className="flex flex-row items-center gap-16 w-full max-w-5xl">
+    <div className="flex items-center justify-center min-h-screen px-6 py-16">
+      <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 w-full max-w-5xl">
         <motion.div
           whileHover={{ scale: 1.01 }}
           transition={{ duration: 0.5 }}
-          className="shrink-0 rounded-2xl bg-[#f5f5f5] overflow-hidden ring-1 ring-black/5 flex items-center justify-center"
-          style={{ width: "400px", height: "500px" }}
+          className="shrink-0 rounded-2xl bg-[#f5f5f5] overflow-hidden ring-1 ring-black/5 flex items-center justify-center w-full lg:w-[400px] h-[300px] lg:h-[500px]"
         >
           <motion.img
             src={gift.image}
@@ -19,9 +18,9 @@ export default function GiftDetail({ gift }: any) {
             transition={{ duration: 0.7 }}
           />
         </motion.div>
-        <div className="flex flex-col justify-center">
-          <h1 className="text-4xl font-semibold">{gift.name}</h1>
-          <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-md">
+        <div className="flex flex-col justify-center items-start w-full">
+          <h1 className="text-3xl lg:text-4xl font-semibold">{gift.name}</h1>
+          <p className="mt-6 text-gray-600 text-base lg:text-lg leading-relaxed max-w-md">
             {gift.description}
           </p>
           {gift.observation && (

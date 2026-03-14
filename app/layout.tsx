@@ -1,5 +1,6 @@
 
 import "./globals.css";
+import { AccessLogger } from "@/components/AccessLogger";
 
 export const metadata = {
   title: "Lista de Presentes",
@@ -9,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        <AccessLogger />
+        {children}
+      </body>
     </html>
   );
 }
